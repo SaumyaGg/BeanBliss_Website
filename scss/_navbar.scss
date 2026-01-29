@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'mixin';
+
+body, header {
+    margin: 0;
+    padding: 0;
+    color: $light-text;
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    background: $primary-color;
+    color: $light-text;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: space-between;
+
+    &_logo {
+        font-size: 24px;
+        padding-left: $spacing; 
+        color: $light-text;
+    }
+
+    &_links {
+        list-style: none;
+        display: flex;
+        gap: 0.5rem;
+
+        li a {
+            color: $light-text;
+            padding: 0.5rem $spacing; 
+            text-decoration: none;
+            border-radius: 4px; 
+
+            &:hover {
+                @include hover-effect($primary-color, $light-text);
+            }    
+            // &:hover {
+            //     background-color: darken($primary-color, 10%);
+            //     color: $hover-color;
+            // }
+        }
+    }
+}

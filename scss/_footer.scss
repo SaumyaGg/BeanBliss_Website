@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixin';
+
+footer {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    
+    
+    & ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .social-media {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    
+    .social-media li {
+        display: inline;
+        margin: 0 0.5rem;
+    }
+}

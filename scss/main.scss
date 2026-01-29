@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'navbar';
+@import 'mixin';
+@import 'home';
+@import 'explore';
+@import 'cards';
+@import 'features';
+@import 'footer';
+@import 'menu';
+@import 'function';
+
+body {
+    font-family: $font;
+    color: $dark-text;
+    background-color: $background-white;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: $font;
+    color: $dark-text;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+
+    &.active {
+        font-weight: bold;
+        border-bottom: 2px solid var(--accent-color);
+    }
+}

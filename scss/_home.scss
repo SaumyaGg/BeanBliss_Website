@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'mixin';
+
+.home {
+    display: flex;
+    flex-direction: column; // Stack items vertically
+    justify-content: center;
+    align-items: center;    // Center horizontally
+    height: 70vh;           // Reduce height to 70% of the viewport
+    background: url(../images/main7.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 5rem;
+
+    &_content {
+        text-align: center;         // Center text and content
+        max-width: 600px;           // Limit width of the content
+        padding: 2rem;              // Add padding around the text
+
+        h1 {
+            font-size: 3rem;         // Adjust font size for readability
+            color: $dark-text;
+            line-height: 1.2;
+            margin-bottom: 1rem;    // Add space below heading
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: $dark-text;
+            margin-bottom: 2rem;   // Add space below paragraph
+        }
+
+        a.home-btn {
+            @include button-style($primary-color, $light-text, $primary-color);  // Use the button mixin
+            margin-top: 1.5rem;     // Add spacing between paragraph and button
+        }
+    }
+
+    &_image img {
+        max-height: 100px;  // Set maximum height for the image
+        width: auto;        // Keep the aspect ratio
+        object-fit: cover;  // Ensure the image is properly cropped if necessary
+    }
+
+    @media (min-width: 768px) {
+        .home_content {
+            padding: 5rem;  // Increase padding for larger screens
+        }
+    }
+}

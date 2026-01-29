@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'mixin';
+
+.specials {
+    padding: 4rem 9%;
+    background-color: $background-cream; /* Light background for the specials section */
+
+    h2 {
+        text-align: center;
+        font-size: 2rem; /* Reduced font size for the section title */
+        margin-bottom: 2rem; /* Adjusted margin */
+        color: var(--pink);
+    }
+
+    &_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        gap: 1.5rem; /* Space between cards */
+    
+
+    .card {
+        background-color: #fff;
+        border-radius: 8px; /* Slightly reduced border radius */
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow for a flatter look */
+        text-align: center;
+        padding: 1rem; /* Reduced padding */
+        box-shadow: box-shadow(0, 4, 8, 0, rgba(0, 0, 0, 0.1));
+
+        &:hover {
+            transform: translateY(-9px);
+            box-shadow: box-shadow(0, 6, 12, 0, rgba(0, 0, 0, 0.15));
+        }
+    }
+
+    .card img {
+        width: 100%; /* Maintain full width */
+        height: 300px; /* Set a fixed height for all images */
+        border-radius: 8px; /* Consistent border radius */
+        margin-bottom: 0.5rem; /* Reduced margin */
+        object-fit: cover; /* Ensure images cover the container */
+    }
+
+    .card h3 {
+        font-size: 1.5rem; /* Reduced font size for card titles */
+        color: #333;
+        margin-bottom: 0.5rem; /* Reduced margin */
+    }
+
+    a.special-btn {
+        @include button-style($primary-color, $light-text, $primary-color);  // Use the button mixin
+        font-size: 1rem;
+        margin-top: 1.5rem;     // Add spacing between paragraph and button
+    }
+}
+}

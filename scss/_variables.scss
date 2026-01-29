@@ -1,0 +1,20 @@
+$font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$primary-color: #63482a;
+$hover-color: #053605;
+$background-white: white;
+$background-cream: #f0eeea; 
+// $accent-color: #FF8C00;
+
+$light-text: white;
+$dark-text: black;
+  
+$spacing: 2rem;
+
+:root {
+    --primary-color: #{$primary-color}; 
+    --background-white: #{$background-white};
+    --background-cream: #{$background-cream};
+    // --accent-color: #{$accent-color};
+    --light-text: #{$light-text};
+    --dark-text: #{$dark-text};
+}

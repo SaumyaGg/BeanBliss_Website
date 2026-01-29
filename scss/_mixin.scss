@@ -1,0 +1,24 @@
+// _mixin.scss
+@import 'variables';
+
+@mixin hover-effect($bg-color, $txt-color) {
+    background-color: darken($bg-color, 20%);
+    border: 2px solid $bg-color;
+    color: $txt-color;
+}
+
+@mixin button-style($bg-color, $txt-color, $border-color) {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: $light-text;
+    background-color: $primary-color;
+    border: 2px solid $border-color;  // Use the border color passed to the mixin
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        @include hover-effect($bg-color, $txt-color);  // Pass the background and text color to hover-effect
+    }
+}
